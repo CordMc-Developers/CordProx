@@ -8,7 +8,11 @@ import net.corddevs.cordprox.listeners.JoinListener;
 import net.corddevs.cordprox.listeners.ProxyPingListener;
 import net.corddevs.cordprox.sql.MySQL;
 import net.corddevs.cordprox.sql.SQLGetter;
+import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.plugin.Plugin;
+
+import java.sql.SQLException;
 
 public final class Main extends Plugin {
 
@@ -20,8 +24,19 @@ public final class Main extends Plugin {
     @Override
     public void onEnable() {
         this.mySQL = new MySQL();
-        getCommands();
+        data = new SQLGetter(this);
+        try {
+            mySQL.connect();
+        } catch (SQLException e) {
+            getProxy().getConsole().sendMessage((BaseComponent) new TextComponent());
+        }
+
+        if (mySQL.isConnected()) {
+            data.createTable();
+            getProxy().getConsole().sendMessage((BaseComponent) new TextComponent("MYSQL DATABASE CONNECTED SUCCESSFULLY"));
+        }
         getListeners();
+        getCommands();
     }
 
     @Override
