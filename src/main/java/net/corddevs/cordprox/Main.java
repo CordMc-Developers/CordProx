@@ -29,6 +29,7 @@ public final class Main extends Plugin {
     }
 
     public void getCommands() {
+        getProxy().getPluginManager().registerCommand(this, new Friend());
         getProxy().getPluginManager().registerCommand(this, new ping());
         getProxy().getPluginManager().registerCommand(this, new StaffChat());
         getProxy().getPluginManager().registerCommand(this, new AdminChat());
