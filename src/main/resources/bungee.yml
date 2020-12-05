@@ -1,0 +1,6 @@
+name: CordProx
+version: ${project.version}
+main: net.corddevs.cordprox.Main
+depends:
+  - LuckPerms
+  - LiteBans

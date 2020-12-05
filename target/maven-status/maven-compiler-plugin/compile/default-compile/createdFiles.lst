@@ -1,0 +1,9 @@
+net\corddevs\cordprox\commands\Reply.class
+net\corddevs\cordprox\Main.class
+net\corddevs\cordprox\commands\ToggleMsg.class
+net\corddevs\cordprox\commands\ping.class
+net\corddevs\cordprox\commands\SocialSpy.class
+net\corddevs\cordprox\commands\Msg.class
+net\corddevs\cordprox\commands\AdminChat.class
+net\corddevs\cordprox\commands\StaffChat.class
+net\corddevs\cordprox\Utils\Utils.class
