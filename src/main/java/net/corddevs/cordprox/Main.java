@@ -36,6 +36,7 @@ public final class Main extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new Reply());
         getProxy().getPluginManager().registerCommand(this, new ToggleMsg());
         getProxy().getPluginManager().registerCommand(this, new Hub());
+        getProxy().getPluginManager().registerCommand(this, new test());
         getProxy().getPluginManager().registerCommand(this, new SocialSpy());
     }
 
