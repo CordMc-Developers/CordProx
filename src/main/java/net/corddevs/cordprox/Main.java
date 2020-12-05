@@ -6,15 +6,20 @@ import net.corddevs.cordprox.listeners.ChatListener;
 import net.corddevs.cordprox.listeners.DisconnectListener;
 import net.corddevs.cordprox.listeners.JoinListener;
 import net.corddevs.cordprox.listeners.ProxyPingListener;
+import net.corddevs.cordprox.sql.MySQL;
+import net.corddevs.cordprox.sql.SQLGetter;
 import net.md_5.bungee.api.plugin.Plugin;
 
 public final class Main extends Plugin {
 
     public static String prefix = Utils.chat("&3&lCORD&B&LMC &7");
     public static Main instance;
+    public static MySQL mySQL;
+    public static SQLGetter data;
 
     @Override
     public void onEnable() {
+        this.mySQL = new MySQL();
         getCommands();
         getListeners();
     }
