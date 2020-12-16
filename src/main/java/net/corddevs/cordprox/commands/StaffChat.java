@@ -44,7 +44,7 @@ public class StaffChat extends Command {
                     message.append(String.valueOf(String.valueOf(String.valueOf(args[i]))) + " ");
                 for(ProxiedPlayer staff : ProxyServer.getInstance().getPlayers()) {
                     staff.sendMessage((BaseComponent) new TextComponent("\n&7&o(" + getserver(p) + ") &b&lSC &f" +
-                            getPrefix(p.getUniqueId()) + " &f" + p.getName() + "&8: &f" + message + "\n&7"));
+                            p.getName() + " &f" + p.getName() + "&8: &f" + message + "\n&7"));
                 }
             }
         }
